@@ -15,6 +15,8 @@ def sync(from_channel, to_channel, package, token):
     channel.
     """
 
+    print("Syncing {0} from {1} to {2}".format(package, from_channel, to_channel))
+
     # Get an API object to interact with anaconda.org
     api = get_server_api(token=token)
 
@@ -34,7 +36,7 @@ def sync(from_channel, to_channel, package, token):
 
     # Copy over
     for version, basename in versions_sync:
-        print('Copying {0}...'.format(basename))
+        print(' -> copying {0}...'.format(basename))
         api.copy(from_channel, package, version, basename=basename, to_owner=to_channel)
 
 
