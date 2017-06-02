@@ -1,0 +1,18 @@
+language: python
+
+os:
+  - linux
+
+env:
+  global:
+    - CONDA_DEPENDENCIES='anaconda-client'
+
+install:
+  - git clone git://github.com/astropy/ci-helpers.git
+  - source ci-helpers/travis/setup_conda.sh
+
+script:
+  - python sync.py --package glue-core --source conda-forge --destination glueviz
+  - python sync.py --package glue-vispy-viewers --source conda-forge --destination glueviz
+  - python sync.py --package glueviz --source conda-forge --destination glueviz
+
