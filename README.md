@@ -13,5 +13,9 @@ However, we don't want users to necessarily have to add conda-forge as a channel
 This repository includes a ``sync.py`` script that uses the anaconda.org API to make sure that all glue packages in [conda-forge](https://anaconda.org/conda-forge) are present in the [glueviz](https://anaconda.org/glueviz) conda channel. Users can then install glue with:
 
     conda install -c glueviz glueviz
-    
+
 Travis is set to run as a daily cron job (and the build only takes about a minute), and this required the ``BINSTAR_TOKEN`` environment variable to be set as a private token via the Travis settings page.
+
+To run the sync manually, simply clone this repository and type:
+
+    ./sync.sh

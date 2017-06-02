@@ -1,5 +1,7 @@
 # Script to sync conda packages from one channel to another
 
+from __future__ import print_function
+
 import os
 import sys
 
