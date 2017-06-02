@@ -3,6 +3,8 @@ language: python
 os:
   - linux
 
+sudo: false
+
 env:
   global:
     - CONDA_DEPENDENCIES='anaconda-client'
