@@ -11,4 +11,8 @@ python sync.py --package mpl-scatter-density --source conda-forge --destination 
 # The following packages are needed by glue-geospatial and are out of date in defaults
 python sync.py --package rasterio --source conda-forge --destination glueviz
 python sync.py --package snuggs --source conda-forge --destination glueviz
+python sync.py --package libgdal --source conda-forge --destination libgdal
+python sync.py --package libnetcdf --source conda-forge --destination libnetcdf
+python sync.py --package proj4 --source conda-forge --destination proj4
+
 
