@@ -5,14 +5,15 @@
 # python sync.py --package glue-vispy-viewers --source conda-forge --destination glueviz
 # python sync.py --package glueviz --source conda-forge --destination glueviz
 
-python sync.py --package fast-histogram --source conda-forge --destination fast-histogram
-python sync.py --package mpl-scatter-density --source conda-forge --destination mpl-scatter-density
+python sync.py --package fast-histogram --source conda-forge --destination glueviz
+python sync.py --package mpl-scatter-density --source conda-forge --destination glueviz
 
 # The following packages are needed by glue-geospatial and are out of date in defaults
 python sync.py --package rasterio --source conda-forge --destination glueviz
 python sync.py --package snuggs --source conda-forge --destination glueviz
-python sync.py --package libgdal --source conda-forge --destination libgdal
-python sync.py --package libnetcdf --source conda-forge --destination libnetcdf
-python sync.py --package proj4 --source conda-forge --destination proj4
+python sync.py --package libgdal --source conda-forge --destination glueviz
+python sync.py --package gdal --source conda-forge --destination glueviz
+python sync.py --package libnetcdf --source conda-forge --destination glueviz
+python sync.py --package proj4 --source conda-forge --destination glueviz
 
 
