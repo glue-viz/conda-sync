@@ -14,12 +14,12 @@ python sync.py --package mpl-scatter-density --source conda-forge --destination 
 python sync.py --package libgdal --source conda-forge --destination glueviz --version 2.1.4
 python sync.py --package gdal --source conda-forge --destination glueviz --version 2.1.4
 # python sync.py --package libnetcdf --source conda-forge --destination glueviz
-# python sync.py --package proj4 --source conda-forge --destination glueviz
-# python sync.py --package freexl --source conda-forge --destination glueviz
-# python sync.py --package geos --source conda-forge --destination glueviz
-# python sync.py --package giflib --source conda-forge --destination glueviz
-# python sync.py --package json-c --source conda-forge --destination glueviz
-# python sync.py --package kealib --source conda-forge --destination glueviz
-# python sync.py --package libdap4 --source conda-forge --destination glueviz
-# python sync.py --package libkml --source conda-forge --destination glueviz
-# python sync.py --package libspatialite --source conda-forge --destination glueviz
+python sync.py --package proj4 --source conda-forge --destination glueviz --version 4.9.3
+python sync.py --package freexl --source conda-forge --destination glueviz --version 1.0.2
+python sync.py --package geos --source conda-forge --destination glueviz --version 3.5.1
+python sync.py --package giflib --source conda-forge --destination glueviz --version 5.1.4
+python sync.py --package json-c --source conda-forge --destination glueviz --version 0.12.1
+python sync.py --package kealib --source conda-forge --destination glueviz --version 1.4.7
+python sync.py --package libdap4 --source conda-forge --destination glueviz --version 3.18.3
+python sync.py --package libkml --source conda-forge --destination glueviz --version 1.3.0
+python sync.py --package libspatialite --source conda-forge --destination glueviz --version 4.3.0a
