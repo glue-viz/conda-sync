@@ -15,5 +15,13 @@ python sync.py --package libgdal --source conda-forge --destination glueviz
 python sync.py --package gdal --source conda-forge --destination glueviz
 python sync.py --package libnetcdf --source conda-forge --destination glueviz
 python sync.py --package proj4 --source conda-forge --destination glueviz
+python sync.py --package freexl --source conda-forge --destination glueviz
+python sync.py --package geos --source conda-forge --destination glueviz
+python sync.py --package giflib --source conda-forge --destination glueviz
+python sync.py --package json-c --source conda-forge --destination glueviz
+python sync.py --package kealib --source conda-forge --destination glueviz
+python sync.py --package libdap4 --source conda-forge --destination glueviz
+python sync.py --package libkml --source conda-forge --destination glueviz
+python sync.py --package libspatialite --source conda-forge --destination glueviz
 
 
