@@ -24,4 +24,4 @@ python sync.py --package libdap4 --source conda-forge --destination glueviz --ve
 python sync.py --package libkml --source conda-forge --destination glueviz --version 1.3.0
 python sync.py --package libspatialite --source conda-forge --destination glueviz --version 4.3.0a
 python sync.py --package boost --source conda-forge --destination glueviz --version 1.64.0
-
+python sync.py --package boost-cpp --source conda-forge --destination glueviz --version 1.64.0
