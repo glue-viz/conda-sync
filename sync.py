@@ -11,7 +11,7 @@ from binstar_client import NotFound
 from binstar_client.utils import get_server_api
 
 
-def sync(from_channel, to_channel, package, token):
+def sync(from_channel, to_channel, package, token, exact_version=None):
     """
     Sync all versions of a package from a conda channel to another conda
     channel.
@@ -38,6 +38,8 @@ def sync(from_channel, to_channel, package, token):
 
     # Copy over
     for version, basename in versions_sync:
+        if exact_version is not None and version != exact_version:
+            continue
         print(' -> copying {0}...'.format(basename))
         api.copy(from_channel, package, version, basename=basename, to_owner=to_channel)
 
@@ -47,6 +49,7 @@ def main(*argv):
     parser = ArgumentParser('Sync packages from one conda owner to another')
     parser.add_argument('--package', help='Package to sync')
     parser.add_argument('--source', help='Source conda channel owner')
+    parser.add_argument('--version', help='Specific version to sync (optional)', default=None)
     parser.add_argument('--destination', help='Destination conda channel owner')
     parser.add_argument('--token', default=None,
                         help=('anaconda.org API token. May set '
@@ -57,7 +60,8 @@ def main(*argv):
 
     token = args.token or os.getenv('BINSTAR_TOKEN')
 
-    sync(args.source, args.destination, args.package, token)
+    sync(args.source, args.destination, args.package, token, exact_version=args.version)
 
+print_function
 if __name__ == "__main__":
     main(*sys.argv)
