@@ -8,9 +8,6 @@
 python sync.py --package fast-histogram --source conda-forge --destination glueviz
 python sync.py --package mpl-scatter-density --source conda-forge --destination glueviz
 
-python sync.py --package fast-histogram --source conda-forge --destination glueviz/label/dev
-python sync.py --package mpl-scatter-density --source conda-forge --destination glueviz/label/dev
-
 # The following packages are needed by glue-geospatial and are out of date in defaults
 # python sync.py --package rasterio --source conda-forge --destination glueviz --version 0.36.0
 # python sync.py --package snuggs --source conda-forge --destination glueviz
@@ -33,7 +30,5 @@ python sync.py --package mpl-scatter-density --source conda-forge --destination 
 # glue-medical
 python sync.py --package gdcm --source conda-forge --destination glueviz --version 2.6.6
 python sync.py --package pydicom --source conda-forge --destination glueviz --version 0.9.9 
-python sync.py --package gdcm --source conda-forge --destination glueviz/label/dev --version 2.6.6
-python sync.py --package pydicom --source conda-forge --destination glueviz/label/dev --version 0.9.9 
 
 
