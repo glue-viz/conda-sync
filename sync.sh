@@ -34,3 +34,5 @@ python sync.py --package pydicom --source conda-forge --destination glueviz --ve
 # specviz + cubeviz
 python sync.py --package specutils --source conda-forge --destination glueviz
 python sync.py --package spectral-cube --source conda-forge --destination glueviz
+python sync.py --package specviz --source cubeviz --destination glueviz
+python sync.py --package cubeviz --source cubeviz --destination glueviz
