@@ -37,3 +37,4 @@ python sync.py --package spectral-cube --source conda-forge --destination gluevi
 python sync.py --package specviz --source cubeviz --destination glueviz
 python sync.py --package cubeviz --source cubeviz --destination glueviz
 python sync.py --package asteval --source conda-forge --destination glueviz
+python sync.py --package asdf --source conda-forge --destination glueviz
