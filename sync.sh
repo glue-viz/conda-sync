@@ -31,4 +31,7 @@ python sync.py --package mpl-scatter-density --source conda-forge --destination 
 python sync.py --package gdcm --source conda-forge --destination glueviz --version 2.8.4
 python sync.py --package pydicom --source conda-forge --destination glueviz --version 1.0.2
 
+# specviz
+python sync.py --package specutils --source conda-forge --destination glueviz
+python sync.py --package spectral-cube --source conda-forge --destination glueviz
 
