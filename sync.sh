@@ -27,6 +27,10 @@ python sync.py --package mpl-scatter-density --source conda-forge --destination 
 # python sync.py --package boost-cpp --source conda-forge --destination glueviz --version 1.64.0
 # python sync.py --package poppler --source conda-forge --destination glueviz --version 0.52.0
 
+# glue-wwt
+python sync.py --package ipyevents --source wwt --destination glueviz
+python sync.py --package pywwt --source wwt --destination glueviz
+
 # glue-medical
 python sync.py --package gdcm --source conda-forge --destination glueviz --version 2.8.4
 python sync.py --package pydicom --source conda-forge --destination glueviz --version 1.0.2
