@@ -43,6 +43,8 @@ python sync.py --package asdf --source conda-forge --destination glueviz
 python sync.py --package radio-beam --source conda-forge --destination glueviz
 
 # glue-jupyter
+python sync.py --package traittypes --source conda-forge --destination glueviz
+python sync.py --package ipywebrtc --source conda-forge --destination glueviz
 python sync.py --package ipyvolume --source conda-forge --destination glueviz
 python sync.py --package bqplot --source conda-forge --destination glueviz
 python sync.py --package ipympl --source conda-forge --destination glueviz
