@@ -41,3 +41,8 @@ python sync.py --package spectral-cube --source conda-forge --destination gluevi
 python sync.py --package asteval --source conda-forge --destination glueviz
 python sync.py --package asdf --source conda-forge --destination glueviz
 python sync.py --package radio-beam --source conda-forge --destination glueviz
+
+# glue-jupyter
+python sync.py --package ipyvolume --source conda-forge --destination glueviz
+python sync.py --package bqplot --source conda-forge --destination glueviz
+python sync.py --package ipympl --source conda-forge --destination glueviz
