@@ -1,10 +1,14 @@
 #!/bin/bash -xe
 
-for dev in "false true"
+options='false true'
+
+for dev in $options
 do
 
+  echo "Running with dev set to $dev"
+
   if [[ $dev == true ]]; then
-    FLAGS="--to-label=dev";
+    FLAGS="--destination-label=dev";
   else
     FLAGS=""
   fi
