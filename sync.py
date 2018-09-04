@@ -11,7 +11,8 @@ from binstar_client import NotFound
 from binstar_client.utils import get_server_api
 
 
-def sync(from_channel, to_channel, package, token, exact_version=None):
+def sync(from_channel, to_channel, package, token, exact_version=None,
+         from_label='main', to_label='main'):
     """
     Sync all versions of a package from a conda channel to another conda
     channel.
@@ -24,12 +25,12 @@ def sync(from_channel, to_channel, package, token, exact_version=None):
 
     # Find out which versions are available from origin
     package_orig = api.package(from_channel, package)
-    versions_orig = [(x['version'], x['basename']) for x in package_orig['files']]
+    versions_orig = [(x['version'], x['basename']) for x in package_orig['files'] if from_label in x['labels']]
 
     # Find out which versions are available from destination
     try:
         package_dest = api.package(to_channel, package)
-        versions_dest = [(x['version'], x['basename']) for x in package_dest['files']]
+        versions_dest = [(x['version'], x['basename']) for x in package_dest['files'] if to_label in x['labels']]
     except NotFound:
         versions_dest = []
 
@@ -40,8 +41,9 @@ def sync(from_channel, to_channel, package, token, exact_version=None):
     for version, basename in versions_sync:
         if exact_version is not None and version != exact_version:
             continue
-        print(' -> copying {0}...'.format(basename))
-        api.copy(from_channel, package, version, basename=basename, to_owner=to_channel)
+        print(' -> copying {0} from {1} [{2}] to {3} [{4}]...'.format(basename, from_channel, from_label, to_channel, to_label))
+        api.copy(from_channel, package, version, basename=basename,
+                 to_owner=to_channel, from_label=from_label, to_label=to_label)
 
 
 def main(*argv):
@@ -49,8 +51,10 @@ def main(*argv):
     parser = ArgumentParser('Sync packages from one conda owner to another')
     parser.add_argument('--package', help='Package to sync')
     parser.add_argument('--source', help='Source conda channel owner')
+    parser.add_argument('--source-label', help='Label of the package in the source channel', default='main')
     parser.add_argument('--version', help='Specific version to sync (optional)', default=None)
     parser.add_argument('--destination', help='Destination conda channel owner')
+    parser.add_argument('--destination-label', help='Label of the package in the destination channel', default='main')
     parser.add_argument('--token', default=None,
                         help=('anaconda.org API token. May set '
                               'environmental variable BINSTAR_TOKEN '
@@ -60,8 +64,8 @@ def main(*argv):
 
     token = args.token or os.getenv('BINSTAR_TOKEN')
 
-    sync(args.source, args.destination, args.package, token, exact_version=args.version)
+    sync(args.source, args.destination, args.package, token, exact_version=args.version,
+         from_label=args.source_label, to_label=args.destination_label)
 
-print_function
 if __name__ == "__main__":
     main(*sys.argv)
