@@ -48,12 +48,13 @@ do
   python sync.py --package gdcm --source conda-forge --destination glueviz --version 2.8.4 $FLAGS
   python sync.py --package pydicom --source conda-forge --destination glueviz --version 1.0.2 $FLAGS
 
-  # specviz + cubeviz
+  # specviz + cubeviz + mosviz
   python sync.py --package specutils --source conda-forge --destination glueviz $FLAGS
   python sync.py --package spectral-cube --source conda-forge --destination glueviz $FLAGS
   python sync.py --package asteval --source conda-forge --destination glueviz $FLAGS
   python sync.py --package asdf --source conda-forge --destination glueviz $FLAGS
   python sync.py --package radio-beam --source conda-forge --destination glueviz $FLAGS
+  python sync.py --package regions --source conda-forge --destination glueviz $FLAGS
 
   # glue-jupyter
   python sync.py --package traittypes --source conda-forge --destination glueviz $FLAGS
