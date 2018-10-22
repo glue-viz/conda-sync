@@ -56,6 +56,7 @@ do
   python sync.py --package radio-beam --source conda-forge --destination glueviz $FLAGS
   python sync.py --package regions --source conda-forge --destination glueviz $FLAGS
   python sync.py --package astropy-healpix --source conda-forge --destination glueviz $FLAGS
+  python sync.py --package gwcs --source conda-forge --destination glueviz $FLAGS
 
   # glue-jupyter
   python sync.py --package traittypes --source conda-forge --destination glueviz $FLAGS
