@@ -43,6 +43,8 @@ do
   # glue-wwt
   python sync.py --package ipyevents --source wwt --destination glueviz $FLAGS
   python sync.py --package pywwt --source wwt --destination glueviz $FLAGS
+  python sync.py --package reproject --source wwt --destination glueviz $FLAGS
+  python sync.py --package astropy-healpix --source wwt --destination glueviz $FLAGS
 
   # glue-medical
   python sync.py --package gdcm --source conda-forge --destination glueviz --version 2.8.4 $FLAGS
