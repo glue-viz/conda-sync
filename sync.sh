@@ -67,7 +67,8 @@ do
   python sync.py --package bqplot --source conda-forge --destination glueviz $FLAGS
   python sync.py --package bqplot-image-gl --source conda-forge --destination glueviz $FLAGS
   python sync.py --package ipympl --source conda-forge --destination glueviz $FLAGS
-  python sync.py --package ipyvuetify --source conda-forge --destination glueviz $FLAGS
+  python sync.py --package ipyvue --source conda-forge --destination glueviz $FLAGS
+  python sync.py --package ipymaterialui --source conda-forge --destination glueviz $FLAGS
   python sync.py --package ipymaterialui --source conda-forge --destination glueviz $FLAGS
 
   # glue-regions
