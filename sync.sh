@@ -76,5 +76,6 @@ do
 
   # glue-vispy-viewers
   python sync.py --package vispy --source conda-forge --destination glueviz $FLAGS
+  python sync.py --package freetype-py --source conda-forge --destination glueviz $FLAGS
 
 done
