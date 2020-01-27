@@ -74,4 +74,7 @@ do
   # glue-regions
   python sync.py --package regions --source conda-forge --destination glueviz $FLAGS
 
+  # glue-vispy-viewers
+  python sync.py --package vispy --source conda-forge --destination glueviz $FLAGS
+
 done
