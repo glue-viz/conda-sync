@@ -71,6 +71,7 @@ do
   python sync.py --package ipymaterialui --source conda-forge --destination glueviz $FLAGS
   python sync.py --package pythreejs --source conda-forge --destination glueviz $FLAGS
   python sync.py --package ipydatawidgets --source conda-forge --destination glueviz $FLAGS
+  python sync.py --package ipyscales --source conda-forge --destination glueviz $FLAGS
 
   # glue-regions
   python sync.py --package regions --source conda-forge --destination glueviz $FLAGS
