@@ -18,6 +18,7 @@ do
   # python sync.py --package glue-vispy-viewers --source conda-forge --destination glueviz
   # python sync.py --package glueviz --source conda-forge --destination glueviz
 
+  python sync.py --package echo --source conda-forge --destination glueviz $FLAGS
   python sync.py --package fast-histogram --source conda-forge --destination glueviz $FLAGS
   python sync.py --package mpl-scatter-density --source conda-forge --destination glueviz $FLAGS
 
