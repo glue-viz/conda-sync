@@ -70,6 +70,7 @@ do
   python sync.py --package bqplot-image-gl --source conda-forge --destination glueviz $FLAGS
   python sync.py --package ipympl --source conda-forge --destination glueviz $FLAGS
   python sync.py --package ipyvue --source conda-forge --destination glueviz $FLAGS
+  python sync.py --package ipyvuetify --source conda-forge --destination glueviz $FLAGS
   python sync.py --package ipymaterialui --source conda-forge --destination glueviz $FLAGS
   python sync.py --package pythreejs --source conda-forge --destination glueviz $FLAGS
   python sync.py --package ipydatawidgets --source conda-forge --destination glueviz $FLAGS
