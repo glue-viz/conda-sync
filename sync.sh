@@ -58,6 +58,7 @@ do
   python sync.py --package spectral-cube --source conda-forge --destination glueviz $FLAGS
   python sync.py --package asteval --source conda-forge --destination glueviz $FLAGS
   python sync.py --package asdf --source conda-forge --destination glueviz $FLAGS
+  python sync.py --package semantic_version --source conda-forge --destination glueviz $FLAGS
   python sync.py --package radio-beam --source conda-forge --destination glueviz $FLAGS
   python sync.py --package regions --source conda-forge --destination glueviz $FLAGS
   python sync.py --package astropy-healpix --source conda-forge --destination glueviz $FLAGS
