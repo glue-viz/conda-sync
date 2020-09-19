@@ -47,6 +47,7 @@ do
   python sync.py --package reproject --source conda-forge --destination glueviz $FLAGS
   python sync.py --package astropy-healpix --source conda-forge --destination glueviz $FLAGS
   python sync.py --package python_abi --source conda-forge --destination glueviz $FLAGS
+  python sync.py --package readline --source conda-forge --destination glueviz $FLAGS
 
   # glue-medical
   python sync.py --package gdcm --source conda-forge --destination glueviz --version 2.8.4 $FLAGS
