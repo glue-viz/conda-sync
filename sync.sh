@@ -42,10 +42,10 @@ do
   # python sync.py --package poppler --source conda-forge --destination glueviz --version 0.52.0
 
   # glue-wwt
-  python sync.py --package ipyevents --source wwt --destination glueviz $FLAGS
-  python sync.py --package pywwt --source wwt --destination glueviz $FLAGS
-  python sync.py --package reproject --source wwt --destination glueviz $FLAGS
-  python sync.py --package astropy-healpix --source wwt --destination glueviz $FLAGS
+  python sync.py --package ipyevents --source conda-forge --destination glueviz $FLAGS
+  python sync.py --package pywwt --source conda-forge --destination glueviz $FLAGS
+  python sync.py --package reproject --source conda-forge --destination glueviz $FLAGS
+  python sync.py --package astropy-healpix --source conda-forge --destination glueviz $FLAGS
   python sync.py --package python_abi --source conda-forge --destination glueviz $FLAGS
 
   # glue-medical
