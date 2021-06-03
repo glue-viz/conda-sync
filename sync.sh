@@ -86,5 +86,6 @@ do
   python sync.py --package freetype-py --source conda-forge --destination glueviz $FLAGS
   python sync.py --package fontconfig --source conda-forge --destination glueviz $FLAGS
   python sync.py --package libuuid --source conda-forge --destination glueviz $FLAGS
+  python sync.py --package pyopengl --source conda-forge --destination glueviz $FLAGS
 
 done
