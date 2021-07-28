@@ -13,10 +13,12 @@ do
     FLAGS=""
   fi
 
-  # We now build the following ourselves, so don't need to copy them over
-  # python sync.py --package glue-core --source conda-forge --destination glueviz
-  # python sync.py --package glue-vispy-viewers --source conda-forge --destination glueviz
-  # python sync.py --package glueviz --source conda-forge --destination glueviz
+  python sync.py --package glue-core --source conda-forge --destination glueviz $FLAGS
+  python sync.py --package glue-vispy-viewers --source conda-forge --destination glueviz $FLAGS
+  python sync.py --package glueviz --source conda-forge --destination glueviz $FLAGS
+  python sync.py --package glue-astronomy --source conda-forge --destination glueviz $FLAGS
+  python sync.py --package glue-wwt --source conda-forge --destination glueviz $FLAGS
+  python sync.py --package glue-geospatial --source conda-forge --destination glueviz $FLAGS
 
   python sync.py --package echo --source conda-forge --destination glueviz $FLAGS
   python sync.py --package fast-histogram --source conda-forge --destination glueviz $FLAGS
