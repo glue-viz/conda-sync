@@ -20,3 +20,5 @@ jobs:
       run: pip install anaconda-client
     - name: Run sync
       run: ./sync.sh
+      env:
+        BINSTAR_TOKEN: ${{ secrets.BINSTAR_TOKEN }}
