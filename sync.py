@@ -44,7 +44,7 @@ def sync(from_channel, to_channel, package, token, exact_version=None,
         print(' -> copying {0} from {1} [{2}] to {3} [{4}]...'.format(basename, from_channel, from_label, to_channel, to_label))
         try:
             api.copy(from_channel, package, version, basename=basename,
-                     to_owner=to_channel, from_label=from_label, to_label=to_label)
+                     to_owner=to_channel)
         except Conflict:
             # Really this should never happen, but it does.
             print('    *** Copy failed because of conflict on destination ***')
