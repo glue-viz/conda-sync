@@ -1,0 +1,22 @@
+name: Sync conda channels
+
+on:
+  push:
+    branches:
+    - master
+    tags:
+  pull_request:
+
+jobs:
+  tests:
+    name: Sync conda channels
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+    - name: Install dependencies
+      run: pip install anaconda-client
+    - name: Run sync
+      run: ./sync.sh
