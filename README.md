@@ -1,6 +1,6 @@
 # Keeping the conda-forge and glueviz channels in sync
 
-[![Build Status](https://travis-ci.org/glue-viz/conda-sync.svg?branch=master)](https://travis-ci.org/glue-viz/conda-sync)
+[![Sync conda channels](https://github.com/glue-viz/conda-sync/actions/workflows/sync.yml/badge.svg)](https://github.com/glue-viz/conda-sync/actions/workflows/sync.yml)
 
 The main glue conda packages are built on conda-forge:
 
